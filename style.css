@@ -1,0 +1,47 @@
+.jumbotron {
+  padding-top: 5rem;
+  background: linear-gradient(-45deg, #ee7752, #f0e68c, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+  animation: gradient 20s ease infinite;
+}
+
+#projects {
+  background-color: #f0e68c;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.gallery-img {
+width: 100%;
+}
+
+#gallery .row > *{
+  padding: 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@-webkit-keyframes gradient {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+}
+@-moz-keyframes gradient {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+}
