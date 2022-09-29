@@ -1,8 +1,10 @@
 .jumbotron {
   padding-top: 6rem;
+  background-color: #f0e68c;
+}
+.navbar {
   background: linear-gradient(-45deg, #ee7752, #f0e68c, #23a6d5, #23d5ab, #3234e2);
 	background-size: 400% 400%;
-  background-size: 400% 400%;
   -webkit-animation: AnimationName 20s ease infinite;
     -moz-animation: AnimationName 20s ease infinite;
   animation: gradient 20s ease infinite;
@@ -44,4 +46,8 @@ width: 100%;
   0%{background-position:51% 0%}
   50%{background-position:50% 100%}
   100%{background-position:51% 0%}
+}
+
+a {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
