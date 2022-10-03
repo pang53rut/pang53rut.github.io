@@ -7,6 +7,7 @@
     <title>Sundawa</title>
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -23,6 +24,16 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="logo.svg" width="30" height="27" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
   </head>
   <body id="home">
     <!-- Navbar img -->
@@ -84,6 +95,7 @@
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
       <img src="img/foto2.jpg" alt="team work" width="230" class="rounded-circle" />
+      <h1 class="display-6">Hello, I'm</h1>
       <h1 class="display-4">E. CECEP EPENDI</h1>
       <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -309,7 +321,17 @@
 
     <!-- footer -->
     <footer class="bg-warning text-white text-center pb-3">
-      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="" class="text-white fw-bold">Sundawa</a></p>
+      <div class="container">
+        <h3>Ende Cecep Ependi</h3>
+        <p>Berusaha untuk menerima dengan ikhlas segala ketentuan-Nya dan berharap hanya kepada-Nya</p>
+        
+          <a href="https://www.facebook.com/cefaigan" class="btn btn-primary" title="Facebook"><i class="fa-brands fa-facebook" target="_blank"></i></a>
+          <a href="https://wa.me/62819230681" class="btn btn-success" title="Whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="btn btn-danger" title="Instagram"><i class="fa-brands fa-instagram" target="_blank"></i></a>
+          <a href="https://www.linkedin.com/in/ende-cecep-ependi-92320b41/" class="btn btn-info" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/pang53rut/pang53rut.github.io" class="btn btn-dark" title="github"><i class="fa-brands fa-github" target="_blank"></i></a>
+      <p></p>
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="" class="text-white fw-bold">Urangarut</a></p>
     </footer>
     <!-- Akhir footer -->
 
@@ -331,15 +353,19 @@
           once: true, // whether animation should happen only once - while scrolling down
         });
       </script>
-
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
       <!-- gsap -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/TextPlugin.min.js"></script>
       <script>
         gsap.from('.jumbotron img', { duration: 1, y: -100, opacity: 0, ease: 'bounce'});
         gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'});
+        gsap.from('.display-6', { duration: 1, x: 50, opacity: 0, delay: 0.5, ease: 'end'});
         gsap.registerPlugin(TextPlugin);
-        gsap.to('.lead',{duration: 1.5, delay: 1.5, text: 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.'});
+        gsap.to('.lead',{duration: 1.5, delay: 1.5, text: 'I am a Welltest Technician in Geothermal Company, North Sumatra'});
       </script>
     <!-- Script input form -->
     <script>
@@ -369,10 +395,12 @@
           .catch(error => console.error('Error!', error.message))
       })
     </script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
     <!--Start of Tawk.to Script-->
 <!--Add the following script at the bottom of the web page (before </body></html>)-->
-<script type="text/javascript">function add_chatinline(){var hccid=80026889;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
-  add_chatinline();</script>
+<script src="//code.tidio.co/ilnc7spkizopvxgvolwjsihksstechea.js" async></script>
   <!--End of Tawk.to Script-->
   </body>
 </html>
