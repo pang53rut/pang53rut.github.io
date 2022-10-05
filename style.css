@@ -1,6 +1,7 @@
 .jumbotron {
   padding-top: 6rem;
   background-color: #f0e68c;
+  text-shadow: 2px 2px #7e7e7c;
 }
 .navbar {
   background: linear-gradient(-45deg, #ee7752, #f0e68c, #23a6d5, #23d5ab, #3234e2);
@@ -106,4 +107,16 @@ footer-h3 {
 
 .section-title p {
   margin-bottom: 0;
+}
+
+.parralax {
+  background: url(img/paralaximg/5.jpeg) no-repeat center center fixed;
+  display: table;
+  height: 50%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
