@@ -462,32 +462,52 @@
       </script>
     <!-- Script input form -->
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxxL_xyokU7M8aGhGBhKndQvVPGmqGbRYVPTgs9KdbtbeZ4uxzahphstlXpjfpNEmEh/exec'
-      const form = document.forms['Email Subscribers']
-      const btnKirim = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.btn-loading');
-      const myAlert = document.querySelector('.my-alert');
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        // ketika tombol submit diklik
-        // tampilkan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            // ketika tombol submit diklik
-            // tampilkan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
-            // tampilkan alert
-            myAlert.classList.toggle('d-none');
-            // reset form
-            form.reset();
-            console.log('Success!', response)
-          })
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxxL_xyokU7M8aGhGBhKndQvVPGmqGbRYVPTgs9KdbtbeZ4uxzahphstlXpjfpNEmEh/exec';
+  const form = document.forms['Email Subscribers'];
+  const btnKirim = document.querySelector('.btn-kirim');
+  const btnLoading = document.querySelector('.btn-loading');
+  const myAlert = document.querySelector('.my-alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Tombol loading muncul
+    btnLoading.classList.remove('d-none');
+    btnKirim.classList.add('d-none');
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('HTTP error ' + response.status);
+      }
+      return response.text();
+    })
+    .then(data => {
+      // Tombol loading hilang
+      btnLoading.classList.add('d-none');
+      btnKirim.classList.remove('d-none');
+
+      // Tampilkan alert sukses
+      myAlert.classList.remove('d-none');
+
+      // Reset form
+      form.reset();
+      console.log('Success:', data);
+    })
+    .catch(error => {
+      // Tombol loading hilang
+      btnLoading.classList.add('d-none');
+      btnKirim.classList.remove('d-none');
+
+      console.error('Error:', error.message);
+      alert('Gagal mengirim data! Cek koneksi atau periksa URL Google Script.');
+    });
+  });
+</script>
+
 
     <!-- effect parallax -->
     <!-- <script>
